@@ -1,0 +1,10 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "{{.ProjectName}}",
+  "outputfilename": "{{.BinaryName}}",
+  "frontend:build": "go run tools/build.go",
+  "author": {
+    "name": "{{.AuthorName}}",
+    "email": "{{.AuthorEmail}}"
+  }
+}

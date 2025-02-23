@@ -1,0 +1,7 @@
+{
+  "name": "WASM Front-End with go-app",
+  "shortname": "go-app",
+  "author": "Steffen Brüheim",
+  "description": "Template for building a WASM front-end with github.com/maxence-charriere/go-app",
+  "helpurl": "https://github.com/ueffel/wails-go-app-templ"
+}

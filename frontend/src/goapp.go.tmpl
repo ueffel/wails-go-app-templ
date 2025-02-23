@@ -1,0 +1,28 @@
+package main
+
+import (
+	"{{.BinaryName}}/frontend/src/components"
+
+	"github.com/maxence-charriere/go-app/v10/pkg/app"
+)
+
+func main() {
+	appHandler := &app.Handler{
+		Title:       "{{.ProjectName}}",
+		Description: "A progressive web app written in Go.",
+		Styles: []string{
+			"app.css",
+		},
+		Icon: app.Icon{
+			Default: "assets/images/logo-universal.png",
+			Large:   "assets/images/logo-universal.png",
+			SVG:     "assets/images/logo-universal.png",
+		},
+	}
+
+	// Components
+	app.Route("/", func() app.Composer { return &components.Hello{} })
+
+	app.RunWhenOnBrowser()
+	app.GenerateStaticWebsite(".", appHandler)
+}
